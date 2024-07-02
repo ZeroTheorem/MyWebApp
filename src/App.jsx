@@ -4,13 +4,29 @@ function App() {
   const [num, setNum] = useState(0);
   return (
     <>
-      <div>{num}</div>
+      <h1>Счетчик косяков Завидеевой</h1>
+      <h1>{num}</h1>
       <button
+        className="button"
         onClick={() => {
           return setNum(num + 1);
         }}
       >
-        Click me!
+        Добавить косяк
+      </button>
+      <button
+        className="button"
+        onClick={() => {
+          return setNum((prev) => {
+            if (prev > 0) {
+              return prev - 1;
+            } else {
+              return 0;
+            }
+          });
+        }}
+      >
+        Минус косяк (это вряд ли...)
       </button>
     </>
   );
