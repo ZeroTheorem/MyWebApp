@@ -7,7 +7,6 @@ function App() {
       <h1>Счетчик косяков Завидеевой</h1>
       <h1>{num}</h1>
       <button
-        className="button"
         onClick={() => {
           return setNum(num + 1);
         }}
@@ -15,7 +14,6 @@ function App() {
         Добавить косяк
       </button>
       <button
-        className="button"
         onClick={() => {
           return setNum((prev) => {
             if (prev > 0) {
